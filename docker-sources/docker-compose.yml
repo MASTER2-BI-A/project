@@ -13,10 +13,10 @@ services:
     volumes:
       - ./metabase-data:/metabase-data
     environment:
-      - MB_DB_FILE=/metabase-data/metabase.db
-      - MB_DB_TYPE=h2
-      - MB_DB_DBNAME=metabase.db
-      - MB_DB_PORT=3000
+      MB_DB_FILE: "${MB_DB_FILE}"
+      MB_DB_TYPE: "${MB_DB_TYPE}"
+      MB_DB_DBNAME: "${MB_DB_DBNAME}"
+      MB_DB_PORT: "${MB_DB_PORT}"
     
 
 # Create MySQL docker compose and save data in external volume
@@ -29,15 +29,13 @@ services:
     tty: true
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: DB_ETU
-      MYSQL_USER: metabase
-      MYSQL_PASSWORD: metabase
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
       
     volumes:
-#      - ./dbdata:/var/lib/mysql
       - ../init/etudiants.sql:/docker-entrypoint-initdb.d/etudiants.sql
-#      - ./init/2_sakila.sql:/docker-entrypoint-initdb.d/2_sakila.sql
     
     ports:
       - 3307:3307
