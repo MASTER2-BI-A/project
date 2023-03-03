@@ -1,7 +1,7 @@
-2023-03-03 17:29:01 jdbc[6]: exception
+2023-03-02 19:43:24 jdbc[6]: exception
 org.h2.jdbc.JdbcSQLException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
 SELECT COUNT(*) FROM "PUBLIC"."DATABASECHANGELOGLOCK" [42102-197]
-2023-03-03 17:29:05 jdbc[6]: exception
+2023-03-02 19:43:27 jdbc[6]: exception
 org.h2.jdbc.JdbcSQLException: Column "T.SETTINGS" not found; SQL statement:
 select t."SETTINGS" from "PUBLIC"."METABASE_DATABASE" t where 0=1 [42122-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
@@ -95,7 +95,7 @@ select t."SETTINGS" from "PUBLIC"."METABASE_DATABASE" t where 0=1 [42122-197]
 	at clojure.lang.AFn.applyToHelper(AFn.java:152)
 	at clojure.lang.RestFn.applyTo(RestFn.java:132)
 	at metabase.bootstrap.main(Unknown Source)
-2023-03-03 17:37:48 jdbc[6]: exception
+2023-03-02 19:57:33 jdbc[7]: exception
 org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	at org.h2.message.DbException.get(DbException.java:179)
@@ -156,7 +156,7 @@ org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic c
 	at metabase.core$destroy_BANG_.invoke(core.clj:76)
 	at clojure.lang.AFn.run(AFn.java:22)
 	at java.base/java.lang.Thread.run(Unknown Source)
-2023-03-03 17:37:48 jdbc[6]: exception
+2023-03-02 19:57:33 jdbc[7]: exception
 org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	at org.h2.message.DbException.get(DbException.java:179)
