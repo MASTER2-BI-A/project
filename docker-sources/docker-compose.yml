@@ -38,7 +38,7 @@ services:
       - ../init/etudiants.sql:/docker-entrypoint-initdb.d/etudiants.sql
     
     ports:
-      - 3307:3307
+      - '3360:3306'
 
 
 
