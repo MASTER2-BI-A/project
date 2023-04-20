@@ -39,3 +39,43 @@ services:
     
     ports:
       - '3360:3306'
+
+# Create Apache Webserver to share PHOTOS folder on localhost port 80 enable to access to photos from browser
+
+  apache:
+
+    image: httpd:2.4
+    container_name: apache
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - "../sources_project/PHOTOS:/usr/local/apache2/htdocs/PHOTOS"
+
+
+
+
+
+
+
+
+
+
+
+
+#  webserver:
+#    image: nginx:latest
+#    container_name: webserver
+#    restart: always
+#    ports:
+#      - 80:80
+#    volumes:
+#      - ../sources_project:/usr/share/nginx/html
+
+    
+    
+    
+    #volumes:
+    #  - ../sources_project/PHOTOS:/var/www/html/share/
+
+
