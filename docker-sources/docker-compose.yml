@@ -1,0 +1,81 @@
+# Create docker compose metabase and save data in external volume
+
+version: '3.7'
+
+services:
+
+  metabase:
+    image: metabase/metabase
+    container_name: metabase
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./metabase-data:/metabase-data
+    environment:
+      MB_DB_FILE: "${MB_DB_FILE}"
+      MB_DB_TYPE: "${MB_DB_TYPE}"
+      MB_DB_DBNAME: "${MB_DB_DBNAME}"
+      MB_DB_PORT: "${MB_DB_PORT}"
+    
+
+# Create MySQL docker compose and save data in external volume
+
+
+  db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    stdin_open: true
+    tty: true
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+      
+    volumes:
+      - ../init/etudiants.sql:/docker-entrypoint-initdb.d/etudiants.sql
+    
+    ports:
+      - '3360:3306'
+
+# Create Apache Webserver to share PHOTOS folder on localhost port 80 enable to access to photos from browser
+
+  apache:
+
+    image: httpd:2.4
+    container_name: apache
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - "../sources_project/PHOTOS:/usr/local/apache2/htdocs/PHOTOS"
+
+
+
+
+
+
+
+
+
+
+
+
+#  webserver:
+#    image: nginx:latest
+#    container_name: webserver
+#    restart: always
+#    ports:
+#      - 80:80
+#    volumes:
+#      - ../sources_project:/usr/share/nginx/html
+
+    
+    
+    
+    #volumes:
+    #  - ../sources_project/PHOTOS:/var/www/html/share/
+
+
