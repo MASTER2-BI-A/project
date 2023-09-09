@@ -42,7 +42,7 @@
 
 ```bash
 git clone https://github.com/MASTER2-BI-A/project.git
-cd projet_agile
+cd project
 cd docker-sources
 cp .env_exemple .env
 docker-compose up -d
