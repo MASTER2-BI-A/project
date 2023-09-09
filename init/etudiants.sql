@@ -24,7 +24,7 @@ CREATE TABLE `ACTIVITES` (
   `Activite` varchar(400) DEFAULT NULL,
   PRIMARY KEY (`Code_activites`),
   CONSTRAINT `ACTIVITES_ibfk_1` FOREIGN KEY (`Code_activites`) REFERENCES `ETUDIANTS_ACTIVITES` (`Code_Activites`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `CANDIDATS` (
   KEY `ID_Candidature` (`ID_Candidature`),
   KEY `Code_promo` (`Code_promo`),
   CONSTRAINT `CANDIDATS_ibfk_1` FOREIGN KEY (`Code_promo`) REFERENCES `OUTIL_PROMO` (`Code_promo`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,7 +132,7 @@ CREATE TABLE `DIPLOME` (
   `Mode_selection` varchar(300) DEFAULT NULL,
   `Date_depot` datetime DEFAULT NULL,
   PRIMARY KEY (`Code_Diplome`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +170,7 @@ CREATE TABLE `ENSEIGNANTS` (
   `Mot_de_passe` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Code_Enseignant`),
   CONSTRAINT `ENSEIGNANTS_ibfk_1` FOREIGN KEY (`Code_Enseignant`) REFERENCES `ENSEIGNANTS_ENSEIGNEMENTS` (`Code_Enseignant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,7 +197,7 @@ CREATE TABLE `ENSEIGNANTS_ENSEIGNEMENTS` (
   PRIMARY KEY (`Index_Matieres`),
   KEY `Code_Enseignant` (`Code_Enseignant`),
   KEY `Code_Enseignement` (`Code_Enseignement`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,7 +232,7 @@ CREATE TABLE `ENSEIGNEMENTS` (
   KEY `ID_Maquette` (`ID_Maquette`),
   CONSTRAINT `ENSEIGNEMENTS_ibfk_1` FOREIGN KEY (`Code_Enseignement`) REFERENCES `ENSEIGNANTS_ENSEIGNEMENTS` (`Code_Enseignement`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ENSEIGNEMENTS_ibfk_2` FOREIGN KEY (`ID_Maquette`) REFERENCES `MAQUETTE` (`ID_Maquette`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -285,7 +285,7 @@ CREATE TABLE `ETUDIANTS` (
   CONSTRAINT `ETUDIANTS_ibfk_1` FOREIGN KEY (`ID_Candidats`) REFERENCES `CANDIDATS` (`ID_Candidats`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ETUDIANTS_ibfk_2` FOREIGN KEY (`ID_Maquette`) REFERENCES `MAQUETTE` (`ID_Maquette`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `ETUDIANTS_ibfk_3` FOREIGN KEY (`Code_promo`) REFERENCES `OUTIL_PROMO` (`Code_promo`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -313,7 +313,7 @@ CREATE TABLE `ETUDIANTS_ACTIVITES` (
   KEY `Code_Etudiant` (`Code_Etudiant`),
   KEY `Code_Activites` (`Code_Activites`),
   CONSTRAINT `ETUDIANTS_ACTIVITES_ibfk_1` FOREIGN KEY (`Code_Etudiant`) REFERENCES `ETUDIANTS` (`Code_etudiant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -341,7 +341,7 @@ CREATE TABLE `ETUDIANTS_EXPERIENCES` (
   KEY `Code_Etudiant` (`Code_Etudiant`),
   KEY `Code_Experience` (`Code_Experience`),
   CONSTRAINT `ETUDIANTS_EXPERIENCES_ibfk_1` FOREIGN KEY (`Code_Etudiant`) REFERENCES `ETUDIANTS` (`Code_etudiant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -369,7 +369,7 @@ CREATE TABLE `ETUDIANTS_FORMATION` (
   KEY `Code_formation` (`Code_formation`),
   KEY `Code_etudiant` (`Code_etudiant`),
   CONSTRAINT `ETUDIANTS_FORMATION_ibfk_1` FOREIGN KEY (`Code_etudiant`) REFERENCES `ETUDIANTS` (`Code_etudiant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -397,7 +397,7 @@ CREATE TABLE `ETUDIANTS_INFORMATIQUE` (
   KEY `Code_Etudiant` (`Code_Etudiant`),
   KEY `Code_connaissance` (`Code_connaissance`),
   CONSTRAINT `ETUDIANTS_INFORMATIQUE_ibfk_1` FOREIGN KEY (`Code_Etudiant`) REFERENCES `ETUDIANTS` (`Code_etudiant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -425,7 +425,7 @@ CREATE TABLE `ETUDIANTS_LANGUES` (
   KEY `Code_Etudiant` (`Code_Etudiant`),
   KEY `Code_Langues` (`Code_Langues`),
   CONSTRAINT `ETUDIANTS_LANGUES_ibfk_1` FOREIGN KEY (`Code_Etudiant`) REFERENCES `ETUDIANTS` (`Code_etudiant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -453,7 +453,7 @@ CREATE TABLE `ETUDIANTS_STAGE` (
   KEY `Code_Etudiant` (`Code_Etudiant`),
   KEY `Code_Stage` (`Code_Stage`),
   CONSTRAINT `ETUDIANTS_STAGE_ibfk_1` FOREIGN KEY (`Code_Etudiant`) REFERENCES `ETUDIANTS` (`Code_etudiant`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -481,7 +481,7 @@ CREATE TABLE `EXPERIENCES` (
   `Descriptif` varchar(3000) DEFAULT NULL,
   PRIMARY KEY (`Code_Experience`),
   CONSTRAINT `EXPERIENCES_ibfk_1` FOREIGN KEY (`Code_Experience`) REFERENCES `ETUDIANTS_EXPERIENCES` (`Code_Experience`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -508,7 +508,7 @@ CREATE TABLE `FORMATION` (
   `Localisation` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`Code_formation`),
   CONSTRAINT `FORMATION_ibfk_1` FOREIGN KEY (`Code_formation`) REFERENCES `ETUDIANTS_FORMATION` (`Code_formation`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -538,7 +538,7 @@ CREATE TABLE `INFORMATIQUE` (
   PRIMARY KEY (`Code_connaissance`),
   KEY `Code_Cat` (`Code_Cat`),
   CONSTRAINT `INFORMATIQUE_ibfk_1` FOREIGN KEY (`Code_connaissance`) REFERENCES `ETUDIANTS_INFORMATIQUE` (`Code_connaissance`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -564,7 +564,7 @@ CREATE TABLE `LANGUES` (
   `Niveau_langues` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Code_Langues`),
   CONSTRAINT `LANGUES_ibfk_1` FOREIGN KEY (`Code_Langues`) REFERENCES `ETUDIANTS_LANGUES` (`Code_Langues`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -591,7 +591,7 @@ CREATE TABLE `MAQUETTE` (
   `Periode_Debut` int DEFAULT NULL,
   `Periode_Fin` int DEFAULT NULL,
   PRIMARY KEY (`ID_Maquette`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -627,7 +627,7 @@ CREATE TABLE `OUTIL_CANDIDATURE` (
   `Candidature` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`ID_Candidature`),
   CONSTRAINT `OUTIL_CANDIDATURE_ibfk_1` FOREIGN KEY (`ID_Candidature`) REFERENCES `CANDIDATS` (`ID_Candidature`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -652,7 +652,7 @@ CREATE TABLE `OUTIL_CAT` (
   `Categorie_logiciel` varchar(24) DEFAULT NULL,
   PRIMARY KEY (`Code_Cat`),
   CONSTRAINT `OUTIL_CAT_ibfk_1` FOREIGN KEY (`Code_Cat`) REFERENCES `INFORMATIQUE` (`Code_Cat`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -677,7 +677,7 @@ CREATE TABLE `OUTIL_FORMATION` (
   `Formation` varchar(8) DEFAULT NULL,
   PRIMARY KEY (`Code_formation`),
   CONSTRAINT `OUTIL_FORMATION_ibfk_1` FOREIGN KEY (`Code_formation`) REFERENCES `ETUDIANTS` (`Code_formation`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -701,7 +701,7 @@ CREATE TABLE `OUTIL_PROMO` (
   `Code_promo` int NOT NULL,
   `Promotion` int DEFAULT NULL,
   PRIMARY KEY (`Code_promo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -734,7 +734,7 @@ CREATE TABLE `STAGE` (
   `Descriptif` varchar(400) DEFAULT NULL,
   PRIMARY KEY (`Code_Stage`),
   CONSTRAINT `STAGE_ibfk_1` FOREIGN KEY (`Code_Stage`) REFERENCES `ETUDIANTS_STAGE` (`Code_Stage`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
