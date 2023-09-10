@@ -62,3 +62,8 @@ docker-compose up -d
 
 - Utilisateur : MYSQL_USER
 - Mot de passe : MYSQL_PASSWORD
+
+## Home application
+![My Image](sources_project/Home.png)
+
+
