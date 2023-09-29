@@ -1,0 +1,31 @@
+Code_Enseignant,Nom_Enseignant,Prenom_Enseignant,Grade,Laboratoire,Telephone_moblile,Telephone,Mail,Matieres,Theme_recherche,Page_Presonelle,Site_Internet_Enseignant,Responsable_DESS,Photo_Enseignant,Mot_de_passe
+1,BOUSSAID,Omar,"Maître de conférences","Laboratoire ERIC","06 23 78 54 87","04 78 77 24 14",omar.boussaid@univ-lyon2.fr,"Entrepôts de données avancées, Etude de cas décisionnels - Applications, Gestion de données massives - CM, Gestion de projets",,http://eric.univ-lyon2.fr/~Eboussaid/,,VRAI,,*****
+2,SYLVESTRE-BARON,Patrick,"Maître de conférences",GATT,,"04 78 77 23 77",sylvestr@univ-lyon2.fr,,,,,VRAI,,*****
+3,VATE,Michel,Vacataire,,,,mvate@univ-lyon2.fr,,,,,FAUX,,*****
+4,DURU,Gérard,Vacataire,,,,Gerard.Duru@univ-lyon1.fr,,,,,FAUX,,*****
+5,PETIOT,Romain,Vacataire,,,,romain.petiot@let.ish-lyon.cnrs.fr,,,,,FAUX,,*****
+6,NICOLOYANNIS,Nicolas,Vacataire,,,,nicolas.nicoloyannis@dionysos,,,,,FAUX,,*****
+7,AURAY,Jean-Paul,Vacataire,,,,Jean-Paul.Auray@univ-lyon2.fr,,,,,FAUX,,*****
+8,ZIGHED,Djamel,Vacataire,,,,zighed@univ-lyon2.fr,,,,,FAUX,,*****
+9,"Intervenants externes",,Vacataire,,,,,,,,,FAUX,,
+10,FUCHS,Béatrice,"Maître de conférences","IAE université Lyon 3",,,fuchs@univ-lyon3.fr,,"Raisonnement à partir de cas, représentation de connaissances",,,FAUX,,*****
+12,RAKOTOMALALA,Ricco,"PHD in Computer Science",,,,rakotoma@univ-lyon2.fr,"Programmation spécialisée, Introduction aux Data Science",,,,FAUX,,*****
+13,BONNEVAY,Stéphane,Vacataire,,,,bonnevay@univ-lyon1.fr,,,,,FAUX,,*****
+14,HACID,"Mohamed Saïd",Vacataire,,,,mshacid@lisi.insa-lyon.fr,,,,,FAUX,,*****
+15,DARMONT,Jérome,Vacataire,,,,jerome.darmont@univ-lyon2.fr,,,,,FAUX,,*****
+16,LAMURE,Michel,Vacataire,,,,,,,,,FAUX,,
+17,BENTAYEB,Fadila,"PHD in Computer Science","Laboratoire ERIC",,"04 78 77 24 58",fadila.Bentayeb@univ-lyon2.fr,,"Bases de Données Décisionnelles",http://eric.univ-lyon2.fr/~bentayeb/,,FAUX,,
+18,ANDRIANASOLO,"Fanilo ",Vacataire,,,,fanilo.andrianasolo@worldline.com,"Initiation à la recherche - Big Data, Séminaires de recherche et ateliers techniques",,,,FAUX,,
+19,BLANCHET,Arnaud,Vacataire,,,,arnaud_blanchet@yahoo.fr,"Outils de Business Intelligence - OLAP",,,,FAUX,,
+20,CORIOU,Cedric,Vacataire,,,,cedric.coriou@gmail.com,"Certification ITIL",,,,FAUX,,
+21,DELAMEZIERE,Sébastien,Vacataire,,,,sebastien.delameziere@univ-lyon2.fr,"Technique de recherche d'emploi",,,,FAUX,,
+22,HANNACHI,"Mabrouk ",Vacataire,,,,mabrouk.hannachi@gmail.com,"Outils de Business Intelligence - TALEND",,,,FAUX,,
+23,HARBI,Nouria,Vacataire,,,,nouria.harbi@univ-lyon2.fr,"Gestion de projets",,,,FAUX,,
+24,HEFFERMAN,Janette,Vacataire,,,,Janette.Hefferman@univ-lyon2.fr,Anglais,,,,FAUX,,
+25,HUSKIC,Haris,Vacataire,,,,h.huskic@univ-lyon2.fr,"Programmation spécialisée, Technologie Cloud & Systèmes distribués -- TD, Modèles de données NoSQL",,,,FAUX,,
+26,JACQUES,Julien,"Maître de conférences",,,,julien.Jacques@univ-lyon2.fr,"Fouille de données massives",,,,VRAI,,
+27,KLOECKLE,Eric,Vacataire,,,,eric.kloeckle@gmail.com,"Fouille de données massives -- TD",,,,FAUX,,
+28,MELZER,Guillaume,Vacataire,,,,guillaume.metzler@univ-lyon2.fr,"Fouille de données massives",,,,FAUX,,
+29,MESSAI,"Med Lamine",Vacataire,,,,mohamed-lamine.messai@univ-lyon2.fr,"Technologie Cloud & Systèmes distribués -- CM, Technologie Cloud & Systèmes distribués,  Modèles de données NoSQL -- TD",,,,FAUX,,
+30,DUBOIS,Nicolas,Vacataire,,,,nicolas.dubois@bial-x.com,"Applications mobiles",,,,FAUX,,
+31,WEIWEI,Ma,Vacataire,,,,ma.weiwei45@gmail.com,"Analyse en ligne & Visualisation",,,,FAUX,,

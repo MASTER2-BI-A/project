@@ -1,0 +1,29 @@
+Code_Stage,Sujet_Stage,Tuteurs,Entreprise,Date_Commencer,Date_Finir,Date_Soutenir,Remuneration,Descriptif
+1,"Mise en œuvre d'une solution SFA",,,,,,,"(Sales Force Automation)"
+2,"Tableau de bord du directeur informatique",,CRAM-RA,,,,,
+3,"Amélioration des états de reporting",,Unilog,,,,,
+4,"Audit au sein du service informatique",,"Grand Lyon",,,,,
+5,"Approche modulaire de conception d'algorithmes génétiques hybrides",,,,,,,
+6,"Prévisions des ventes de vaccins",,Aventis-Pasteur,,,,,
+7,"Transfert de données d'une machine de forage vers un PALM",,,,,,,
+8,"EGIPTE : Exloitation et Gestion Informatisée du Produit Train Escale",,,,,,,
+9,"Fouille dans les documents XML",,,,,,,
+10,"Index bitmap et Arbres de décision",,,,,,,
+11,"Création d'un entrepôt de données sur les vaccins de la grippe (GROG)",,,,,,,
+12,"Intégration de règles décisions sous forme de métadonnées",,,,,,,
+13,"Gestion des données bibliographiques",,C.I.R.C.,,,,,
+14,"Développement d'un site Internet",,"BACKLINE & PIANOS",,,,,
+15,"Observatoire de la création d'entreprises en Haute-Savoie",,,,,,,
+16,"Conception de l'entrepôt de données MAP (Médecine d'Anticipation Personnalisée)",,,,,,,
+17,"Pilotage de la facturation machine au sein d'APCIL-AGIRA",,,,,,,
+18,"Extension de la capacité d'exploitation d'un outil d'aide à la décision (POLLEN)",,,,,,,
+19,"Module de saisie automatique dans un logiciel de comptabilité",,,,,,,
+20,"Modélisation multidimensionnelle des données complexes",,,,,,,
+21,"Réorganisation des bases de données au sein de DATAFIRST",,,,,,,
+22,"Apprentissage non supervisé sur les séries temporelles","Nicolas Nicoloyanis","Laboratoire ERIC",01/04/2004,31/08/2004,07/01/2004,,
+23,"Gestion des Immeubles Menaçant de Ruines",,"SQLI Lyon",19/04/2004,20/08/2004,,"30 % du SMIC  + Tickets Restaurants","Le projet concerne la Gestion des Immeubles Menaçant de Ruines. Le client est la Ville de Lyon.  La Programmation sera en ASP, VB et Base de Données SQL Server. (Microsoft N-Tiers)"
+24,"Outils informatiques pour le pilotage des projets d'investissement","Jean-Yves MOREL","MERIAL ex Laboratoires MERIEUX",,,09/03/2004,,
+25,"Installation et migration d'un CRM","Sylvain Loisy",FMI,,,,,
+26,"Modélisation des données",,"GENERALI Assurances Générales",01/05/2004,30/09/2004,09/07/04,,"Mise en place d’une méthodologie de modélisation des données Véhicules à moteur pour SAP Business Warehouse à partir d’une analyse des besoins et analyse de la base de données Business Objects et élaboration d’une procédure de reprise des données (création d’un historique) pour SAP Business Warehouse."
+27,"Reporting quantitatif des données de marché et Optimisation des outils de veille","Omar Boussaid","Aventis Pasteur",26/04/2004,30/09/2004,,,"Contribuer à l'activité Business Intelligence d'Aventis Pasteur International, support à l'exercice de reporting quantitatif des données de marché (Vaxiworld) ainsi que l'optimisation des outils de veille (BIP News)"
+28,,,,15/06/2004,15/09/2004,,,
